@@ -8,9 +8,12 @@ void main()
 	int positionErstesZeichen = 0;
 	int positionZweitesZeichen = breite - 3;
 
+	char zeichenLeer = ' ';
+	char zeichenHaus = 'x';
+
 	for (i = 0; i < breite; i++)
 	{
-		printf("x");
+		printf("%c", zeichenHaus);
 	}
 	printf("\n");
 
@@ -18,21 +21,21 @@ void main()
 
 	for (i = 1; i <= breite - 2; i++)
 	{
-		printf("x");
+		printf("%c", zeichenHaus);
 
 		for (j = 0; j < breite - 2; j++)
 		{
 			if (j == positionErstesZeichen || j == positionZweitesZeichen)
 			{
-				printf("x");
+				printf("%c", zeichenHaus);
 			}
 			else
 			{
-				printf("-");
+				printf("%c", zeichenLeer);
 			}
 		}
 
-		printf("x");
+		printf("%c", zeichenHaus);
 		printf("\n");
 
 		positionErstesZeichen++;
@@ -41,7 +44,7 @@ void main()
 
 	for (i = 0; i < breite; i++)
 	{
-		printf("x");
+		printf("%c", zeichenHaus);
 	}
 
 	getchar();
